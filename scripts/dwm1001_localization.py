@@ -220,6 +220,12 @@ class LocationEngine(object):
             #np.savetxt('/home/miquelserra/localization/' + str(self.id) + '_gt_pose.txt', np.array((x,y,z)))
             #np.savetxt('/home/miquelserra/localization/' + str(self.id) + '_time_stamps.txt', np.array([now.secs, now.nsecs]))
             #np.savetxt('/home/miquelserra/localization/' + str(self.id) + '_ranges.txt', np.array([ranges]))
+            string_gt = "{:.18e} {:.18e} {:.18e}\n".format(x, y, z)
+            f_gt.write(string_gt)
+            np.savetxt(f_ranges, np.array([ranges]))
+            string_timestamps = "{:.18e} {:.18e}\n".format(now.secs, now.nsecs)
+            f_timestamps.write(string_timestamps)
+
             self.id +=1
             self.optitrack_in_world.publish(self.optitrack_sub.pose)
             self.optitrack_sub.new_pose = False
