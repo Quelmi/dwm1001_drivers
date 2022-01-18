@@ -12,6 +12,9 @@ import rospy, tf, time, serial
 from geometry_msgs.msg import PoseStamped, PoseWithCovarianceStamped
 from uwb_msgs.msg import AnchorInfo
 
+import sys
+sys.path.append('/home/miquelserra/catkin_ws/src/dwm1001_drivers/scripts')
+
 from dwm1001_apiCommands import DWM1001_API_COMMANDS, DWM1001_UART_API
 from dwm1001_apiCommands import DWMRangingReq
 

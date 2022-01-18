@@ -12,6 +12,10 @@
 
 import rospy
 import numpy as np
+
+import sys
+sys.path.append('/home/miquelserra/catkin_ws/src/dwm1001_drivers/scripts')
+
 from uwb_msgs.msg import AnchorInfo
 from geometry_msgs.msg import PoseStamped
 from nav_msgs.msg import Odometry
