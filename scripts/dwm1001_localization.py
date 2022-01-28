@@ -47,6 +47,7 @@ class OptitrackSubscriber(object):
             pose = self.tf_listener.transformPose('world', pose)
         except:
             self.new_pose = False
+            rospy.logwarn("Unable to transform pose to world frame")
         pose.header.stamp.nsecs = old_nsecs
 
         self.pose = pose
@@ -74,6 +75,7 @@ class OdometrySubscriber(object):
             self.pose = self.tf_listener.transformPose(self.world_frame_id, self.pose)
         except:
             self.new_pose = False
+            rospy.logwarn("Unable to transform pose to world frame")
     def __init__(self, topic, world_frame_id):
         self.pose = PoseStamped()
         self.new_pose = False

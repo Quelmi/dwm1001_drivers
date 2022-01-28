@@ -1,0 +1,43 @@
+world_frame_id: "world"
+fixed_anchors: [DW4806, DW4814]
+n_networks : 2
+network0: 
+  network_id: "0x11A7"
+  tag_id: "DW02D6"
+  n_anchors: 5
+  anchor0_id: "DW009A"
+  anchor1_id: "DW2D9C"
+  anchor2_id: "DW4848"
+  anchor3_id: "DW0038"
+  anchor4_id: "DW47FC"
+  anchor0_coordinates: [0.0, 0.0 ,0.00] #DW009A
+  anchor1_coordinates: [2.4,2.4,0.00] #DW2D9C
+  anchor2_coordinates: [7.2,2.4,0.00] #DW4848
+  anchor3_coordinates: [2.4,0.0,0.00] #DW0038
+  anchor4_coordinates: [4.8,2.4,0.00] #DW47FC
+  gt:
+    anchor0_coordinates: [0.0, 0.0 ,0.00] #DW009A
+    anchor1_coordinates: [2.4,2.4,0.00] #DW2D9C
+    anchor2_coordinates: [7.2,2.4,0.00] #DW4848
+    anchor3_coordinates: [2.4,0.0,0.00] #DW0038
+    anchor4_coordinates: [4.8,2.4,0.00] #DW47FC
+network1: 
+  network_id: "0x5B1C"
+  tag_id: "DW482E"
+  n_anchors: 5
+  anchor0_id: "DW4984"
+  anchor1_id: "DW4806" 
+  anchor2_id: "DW4814"
+  anchor3_id: "DW43EB"
+  anchor4_id: "DW1632"
+  anchor0_coordinates: [7.2,1.2,0.00] #DW4984
+  anchor1_coordinates: [7.2,0.4,0.00] #DW4806
+  anchor2_coordinates: [3.2,0.0,0.00] #DW4814
+  anchor3_coordinates: [0.0,2.4,0.00] #DW43EB
+  anchor4_coordinates: [0.0,1.2,0.00] #DW1632
+  gt:
+    anchor0_coordinates: [7.2,1.2,0.00] #DW4984
+    anchor1_coordinates: [7.2,0.4,0.00] #DW4806
+    anchor2_coordinates: [3.2,0.0,0.00] #DW4814
+    anchor3_coordinates: [0.0,2.4,0.00] #DW43EB
+    anchor4_coordinates: [0.0,1.2,0.00] #DW1632
