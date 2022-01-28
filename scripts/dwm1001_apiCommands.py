@@ -126,7 +126,7 @@ class DWM1001_UART_API:
                 self.serialPortDWM1001.write(DWM1001_API_COMMANDS.RESET)
                 self.serialPortDWM1001.write(DWM1001_API_COMMANDS.SINGLE_ENTER)
                 time.sleep(1.0)
-                serialReadLine = self.serialPortDWM1001.read_until()
+                serialReadLine = self.serialPortDWM1001.read_until().decode()
                 if "reset" in serialReadLine:
                         print("[INFO] succesfully closed ")
                         self.serialPortDWM1001.close()
@@ -143,7 +143,7 @@ class DWM1001_UART_API:
                         data as array
                 """
                 try:
-                        serial_read_line = self.serialPortDWM1001.read_until()
+                        serial_read_line = self.serialPortDWM1001.read_until().decode()
                 except:
                         return ['']
 
